@@ -3,7 +3,7 @@
     <ul class="metismenu" id="menu">
       <li class="nav-label first">Main Menu</li>
 
-      <li><a href="{{url('admin/v_dashboard')}}" aria-expanded="false"><i class="fa-solid fa-gauge"></i><span class="nav-text">Dashboard</span></a></li>
+      <li><a href="{{route('dashboard.index')}}" aria-expanded="false"><i class="fa-solid fa-gauge"></i><span class="nav-text">Dashboard</span></a></li>
       <li><a href="widget-basic.html" aria-expanded="false"><i class="fa-solid fa-house-chimney"></i><span class="nav-text">Beranda</span></a></li>
 
 

@@ -4,6 +4,7 @@
 use App\Http\Controllers\AparaturController;
 use App\Http\Controllers\PkkController;
 use App\Http\Controllers\BUMDesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IdentitasController;
 use App\Http\Controllers\SejarahController;
 use Illuminate\Support\Facades\Route;
@@ -20,18 +21,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.v_dashboard');
+    return view('index');
 });
 
 
 
-// route profile desa
-Route::resource('identitas', IdentitasController::class);
-Route::resource('sejarah', SejarahController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('dashboard', DashboardController::class);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // route profile desa
+    Route::resource('identitas', IdentitasController::class);
+    Route::resource('sejarah', SejarahController::class);
 
-// route organisasi desa
-Route::resource('aparatur_desa', AparaturController::class);
-Route::resource('pkk', PkkController::class);
-Route::resource('bumdes', BUMDesController::class);
+    // route organisasi desa
+    Route::resource('aparatur_desa', AparaturController::class);
+    Route::resource('pkk', PkkController::class);
+    Route::resource('bumdes', BUMDesController::class);
+});
+
+
 
 Route::resource('register', 'RegisterController::class');
+
+Auth::routes();

@@ -17,50 +17,50 @@
         <div class="table-responsive">
           <table class="table">
             <tbody style="color: dimgray;">
-              @foreach($identitas as $data)
+
               <tr>
                 <th scope="col">Nama Desa</th>
-                <td>{{$data->nama_desa}}</td>
+                <td>{{$identitas->nama_desa}}</td>
               </tr>
               <tr>
                 <th scope="col">Nama Kecamatan</th>
-                <td>{{$data->nama_kecamatan}}</td>
+                <td>{{$identitas->nama_kecamatan}}</td>
               </tr>
               <tr>
                 <th scope="col">Kabupaten</th>
-                <td>{{$data->kabupaten}}</td>
+                <td>{{$identitas->kabupaten}}</td>
               </tr>
               <tr>
                 <th scope="col">Provinsi</th>
-                <td>{{$data->provinsi}}</td>
+                <td>{{$identitas->provinsi}}</td>
               </tr>
               <tr>
                 <th scope="col">Kode Pos</th>
-                <td>{{$data->kode_pos}}</td>
+                <td>{{$identitas->kode_pos}}</td>
               </tr>
               <tr>
                 <th scope="col">Alamat</th>
-                <td>{{$data->alamat}}</td>
+                <td>{{$identitas->alamat}}</td>
               </tr>
               <tr>
                 <th scope="col">Nama Kepala Desa</th>
-                <td>{{$data->nama_kepala_desa}}</td>
+                <td>{{$identitas->nama_kepala_desa}}</td>
               </tr>
               <tr>
                 <th scope="col">Logo</th>
-                <td><img src="{{ Storage::url($data->image) }}" alt="" width="100px"></td>
+                <td><img src="{{ Storage::url($identitas->image) }}" alt="" width="100px"></td>
               </tr>
               <tr>
                 <th scope="col">Instagram</th>
-                <td>{{$data->instagram}}</td>
+                <td>{{$identitas->instagram}}</td>
               </tr>
               <tr>
                 <th scope="col">Facebook</th>
-                <td>{{$data->facebook}}</td>
+                <td>{{$identitas->facebook}}</td>
               </tr>
               <tr>
                 <th scope="col">Twitter</th>
-                <td>{{$data->twitter}}</td>
+                <td>{{$identitas->twitter}}</td>
               </tr>
           </table>
         </div>
@@ -68,13 +68,13 @@
     </div>
   </div>
 
-  <a href="{{route('identitas.edit', $data->id)}}" class="btn btn-sm btn-warning text-white col-md-4">Edit</a>
-  <form method="POST" action="{{ route('identitas.destroy', $data->id) }}" style="display: inline-block;" class="col-md-8">
+  <a href="{{route('identitas.edit', $identitas->id)}}" class="btn btn-sm btn-warning text-white col-md-4">Edit</a>
+  <form method="POST" action="{{ route('identitas.destroy', $identitas->id) }}" style="display: inline-block;" class="col-md-8">
     @csrf
     @method('DELETE')
     <button class="btn btn-sm btn-danger col-md-6" onclick="return confirm('Delete?')">Delete</button>
   </form>
-  @endforeach
+
   </tbody>
   </table>
 </div>

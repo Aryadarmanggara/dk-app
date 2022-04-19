@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sejarah;
+use App\Models\VisiMisi;
 use Illuminate\Http\Request;
 
-class SejarahController extends Controller
+class VisiMisiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class SejarahController extends Controller
      */
     public function index()
     {
-        $sejarah = Sejarah::first();
-        return view('sejarah.v_sejarah', compact('sejarah'));
+        $visimisi = VisiMisi::first();
+        return view('visimisi.v_visimisi', compact('visimisi'));
     }
 
     /**
@@ -25,7 +25,7 @@ class SejarahController extends Controller
      */
     public function create()
     {
-        return view('sejarah.v_add');
+        return view('visimisi.v_add');
     }
 
     /**
@@ -37,16 +37,16 @@ class SejarahController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required',
-            'konten' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
         ]);
 
-        $post = new Sejarah();
-        $post->judul = $request->judul;
-        $post->konten = $request->konten;
+        $post = new VisiMisi();
+        $post->visi = $request->visi;
+        $post->misi = $request->misi;
         $post->save();
 
-        return redirect('sejarah')->with('success', 'Data berhasil ditambahkan !!!');
+        return redirect('visimisi')->with('success', 'Data berhasil ditambahkan !!!');
     }
 
     /**
@@ -68,8 +68,8 @@ class SejarahController extends Controller
      */
     public function edit($id)
     {
-        $sejarah = Sejarah::findOrFail($id);
-        return view('sejarah.v_edit', compact('sejarah'));
+        $visimisi = VisiMisi::findOrFail($id);
+        return view('visimisi.v_edit', compact('visimisi'));
     }
 
     /**
@@ -82,16 +82,16 @@ class SejarahController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'judul' => 'required',
-            'konten' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
         ]);
 
-        $post = Sejarah::find($id);
-        $post->judul = $request->judul;
-        $post->konten = $request->konten;
+        $post = VisiMisi::find($id);
+        $post->visi = $request->visi;
+        $post->misi = $request->misi;
         $post->save();
 
-        return redirect('sejarah')->with('success', 'Update Data Berhasil');
+        return redirect('visimisi')->with('success', 'Update Data Berhasil');
     }
 
     /**

@@ -10,9 +10,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend')}}/images/favicon.png">
   <link rel="stylesheet" href="{{asset('backend')}}/vendor/owl-carousel/css/owl.carousel.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/vendor/owl-carousel/css/owl.theme.default.min.css">
+  <link href="{{asset('backend')}}/vendor/summernote/summernote.css" rel="stylesheet">
   <link href="{{asset('backend')}}/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link href="{{asset('backend')}}/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js">
+  </script>>
 
   <style>
     .montserrat {
@@ -257,7 +259,10 @@
 
   <script src="https://kit.fontawesome.com/4f75af8bce.js" crossorigin="anonymous"></script>
   <!-- Summernote -->
-
+  <script src="{{asset('backend')}}/vendor/summernote/js/summernote.min.js"></script>
+  <!-- Summernote init -->
+  <script src="{{asset('backend')}}/js/plugins-init/summernote-init.js"></script>
+  @yield('ckeditor5')
 
 
 </body>

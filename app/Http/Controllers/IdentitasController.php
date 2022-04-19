@@ -14,10 +14,13 @@ class IdentitasController extends Controller
      */
     public function index()
     {
-        $identitas = Identitas::latest()->paginate(5);
 
-        return view('identitas.v_identitas', compact('identitas'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $identitas = Identitas::first();
+        return view('identitas.v_identitas', compact('identitas'));
+        // $identitas = Identitas::latest()->paginate(5);
+
+        // return view('identitas.v_identitas', compact('identitas'))
+        //     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

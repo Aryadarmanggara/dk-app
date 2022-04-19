@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sejarah extends Model
+class VisiMisi extends Model
 {
     use HasFactory;
-    protected $table = 'sejarahs';
+    protected $table = 'visi_misis';
     protected $fillable = [
-        'judul',
-        'description',
+        'visi',
+        'misi'
     ];
 }

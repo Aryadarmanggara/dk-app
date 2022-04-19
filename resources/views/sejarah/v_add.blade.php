@@ -1,5 +1,5 @@
 @extends('admin.v_template')
-@section('title', 'Sejarah Desa')
+@section('title', 'Input Data Sejarah Desa')
 
 @section('content')
 
@@ -7,19 +7,29 @@
   <div class="col-md-12">
     <div class="card text-white bg-secondary">
       <div class="card-header">
-        <h5 class="card-title text-white">Tambah Data BUMDes</h5>
+        <h5 class="card-title text-white">Input Data Sejarah Desa</h5>
       </div>
       <div class="card-body mb-0">
         <form action="{{ route('sejarah.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control input-default" id="nama" name="nama" value="{{ old('nama') }}">
+            <label for="judul">Judul</label>
+            <input type="text" class="form-control input-default" id="judul" name="judul" value="{{ old('judul') }}">
+            @error('judul')
+            <div class="alert alert-secondary text-danger mt-1">{{ $message }}</div>
+            @enderror
+          </div>
+          <div class="form-group">
+            <label for="konten">Konten</label>
+            <textarea id="konten" name="konten" class="form-control summernote" style="color: black !important;" rows="4" id="konten">{{ old('konten') }}</textarea>
+            @error('konten')
+            <div class="alert alert-secondary text-danger mt-1">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="mb-3">
             <button class="btn btn-md btn-success text-white size-4" type="submit">Save</button>
-            <a href="{{ route('bumdes.index') }}" class="btn btn-md btn-danger size-4">Kembali</a>
+            <a href="{{ route('sejarah.index') }}" class="btn btn-md btn-danger size-4">Kembali</a>
           </div>
         </form>
       </div>

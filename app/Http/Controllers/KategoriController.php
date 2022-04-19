@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sejarah;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
-class SejarahController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class SejarahController extends Controller
      */
     public function index()
     {
-        $sejarah = Sejarah::first();
-        return view('sejarah.v_sejarah', compact('sejarah'));
+        $kategori = Kategori::select('id', 'nama')->latest()->paginate(10);
+        return view('kategori.v_kategori', compact('kategori'));
     }
 
     /**
@@ -25,7 +26,7 @@ class SejarahController extends Controller
      */
     public function create()
     {
-        return view('sejarah.v_add');
+        return view('kategori.v_add');
     }
 
     /**
@@ -37,16 +38,17 @@ class SejarahController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required',
-            'konten' => 'required',
+            'nama' => 'required'
         ]);
 
-        $post = new Sejarah();
-        $post->judul = $request->judul;
-        $post->konten = $request->konten;
-        $post->save();
+        Kategori::create([
+            'nama' => Str::title($request->nama),
+            'slug' => Str::slug($request->nama, '-')
+        ]);
 
-        return redirect('sejarah')->with('success', 'Data berhasil ditambahkan !!!');
+
+
+        return redirect('kategori')->with('success', 'Data berhasil ditambahkan !!!');
     }
 
     /**
@@ -68,8 +70,8 @@ class SejarahController extends Controller
      */
     public function edit($id)
     {
-        $sejarah = Sejarah::findOrFail($id);
-        return view('sejarah.v_edit', compact('sejarah'));
+        $kategori = Kategori::select('id', 'nama')->whereId($id)->first();
+        return view('kategori.v_edit', compact('kategori'));
     }
 
     /**
@@ -82,16 +84,15 @@ class SejarahController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'judul' => 'required',
-            'konten' => 'required',
+            'nama' => 'required'
         ]);
 
-        $post = Sejarah::find($id);
-        $post->judul = $request->judul;
-        $post->konten = $request->konten;
-        $post->save();
+        Kategori::whereId($id)->update([
+            'nama' => Str::title($request->nama),
+            'slug' => Str::slug($request->nama, '-')
+        ]);
 
-        return redirect('sejarah')->with('success', 'Update Data Berhasil');
+        return redirect('kategori')->with('success', 'Nama Kategori berhasil diupdate !!!');
     }
 
     /**
@@ -102,6 +103,8 @@ class SejarahController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kategori = Kategori::findOrFail($id);
+        $kategori->delete();
+        return redirect('kategori')->with('success', 'Data Berhasil Dihapus !!!');
     }
 }

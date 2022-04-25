@@ -12,8 +12,8 @@
       </div>
 
       <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://m.facebook.com/desa.keramas.7#_=_" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/kantor_perbekel_keramas/?hl=id" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
 
     </div>

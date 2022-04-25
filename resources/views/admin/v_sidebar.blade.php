@@ -44,10 +44,10 @@
           <li><a href="{{route('usahamikro.index')}}">Usaha Mikro</a></li>
         </ul>
       </li>
-      <li><a href="widget-basic.html" aria-expanded="false"><i class="fa-solid fa-circle-exclamation"></i><span class="nav-text">Pengaduan Masyarakat</span></a></li>
-      <li><a href="widget-basic.html" aria-expanded="false"><i class="fa-solid fa-gavel"></i><span class="nav-text">Produk Hukum</span></a></li>
-      <li><a href="widget-basic.html" aria-expanded="false"><i class="fa-solid fa-rupiah-sign"></i><span class="nav-text">APBDes</span></a></li>
-      <li><a href="{{route('penduduk.index')}}" aria-expanded="false"><i class="fa-solid fa-users"></i><span class="nav-text">Penduduk</span></a></li>
+      <li><a href="#" aria-expanded="false"><i class="fa-solid fa-circle-exclamation"></i><span class="nav-text">Pengaduan Masyarakat</span></a></li>
+      <li><a href="#" aria-expanded="false"><i class="fa-solid fa-gavel"></i><span class="nav-text">Produk Hukum</span></a></li>
+      <li><a href="#" aria-expanded="false"><i class="fa-solid fa-rupiah-sign"></i><span class="nav-text">APBDes</span></a></li>
+      <li><a href="#" aria-expanded="false"><i class="fa-solid fa-users"></i><span class="nav-text">Penduduk</span></a></li>
       <li><a href="{{route('galeri.index')}}" aria-expanded="false"><i class="fa-solid fa-image"></i><span class="nav-text">Galeri</span></a></li>
 
 

@@ -44,7 +44,7 @@
             <label for="image" class="form-label">Logo</label>
             <input class="form-control" type="file" name="image">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="instagram">Instagram</label>
             <input type="text" class="form-control input-default" id="instagram" name="instagram" value="{{ old('instagram') }}">
           </div>
@@ -55,7 +55,7 @@
           <div class="form-group">
             <label for="twitter">Twitter</label>
             <input type="text" class="form-control input-default" id="twitter" name="twitter" value="{{ old('twitter') }}">
-          </div>
+          </div> -->
           <div class="mb-3">
             <button class="btn btn-md btn-success text-white size-4" type="submit">Save</button>
             <a href="{{ route('identitas.index') }}" class="btn btn-md btn-danger size-4">Kembali</a>

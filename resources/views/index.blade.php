@@ -452,7 +452,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>-</p>
               </div>
             </div><!-- End Info Item -->
 

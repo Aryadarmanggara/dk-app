@@ -1,5 +1,5 @@
 @extends('frontend.template')
-@section('title', 'Home')
+@section('title', 'Detail Blog')
 
 @section('content')
 

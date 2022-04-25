@@ -2,7 +2,7 @@
   <div class="container-fluid d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-      <img src="{{asset('frontend')}}/assets/img/download.jpg" class="img-fluid" alt="" height="300px">
+      <img src="{{asset('backend')}}/images/logoo.png" class="img-fluid" alt="" height="300px">
 
     </a>
 
@@ -34,32 +34,32 @@
           <ul>
             <li><a href="{{url('perangkat-desa')}}">Perangkat Desa</a></li>
             <li><a href="{{url('publik_pkk')}}">PKK</a></li>
-            <li><a href="{{url('publik_bumdesa')}}">BUMDesa</a></li>
+            <!-- <li><a href="{{url('publik_bumdesa')}}">BUMDesa</a></li> -->
             <li><a href="{{url('publik_linmas')}}">Linmas</a></li>
             <li><a href="{{url('publik_karang_taruna')}}">Karang Taruna</a></li>
           </ul>
         </li>
         <li class="dropdown"><a href="#"><span>Artikel</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="#">Pengumuman</a></li>
+            <li><a href="{{url('publik_pengumuman')}}">Pengumuman</a></li>
             <li><a href="{{url('publik_berita')}}">Berita</a></li>
           </ul>
         </li>
         <li class="dropdown"><a href="#"><span>Potensi Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="#">Pariwisata</a></li>
-            <li><a href="#">Alam</a></li>
-            <li><a href="#">Seni Budaya</a></li>
-            <li><a href="#">Kuliner</a></li>
-            <li><a href="#">Perkebunan</a></li>
-            <li><a href="#">Perikanan</a></li>
-            <li><a href="#">Kerajinan</a></li>
-            <li><a href="#">Usaha Mikro</a></li>
+            <li><a href="{{url('publik_pariwisata')}}">Pariwisata</a></li>
+            <li><a href="{{url('publik_alam')}}">Alam</a></li>
+            <li><a href="{{url('publik_senibudaya')}}">Seni Budaya</a></li>
+            <li><a href="{{url('publik_kuliner')}}">Kuliner</a></li>
+            <li><a href="{{url('publik_perkebunan')}}">Perkebunan</a></li>
+            <li><a href="{{url('publik_perikanan')}}">Perikanan</a></li>
+            <li><a href="{{url('publik_kerajinan')}}">Kerajinan</a></li>
+            <li><a href="{{url('publik_usahamikro')}}">Usaha Mikro</a></li>
           </ul>
         </li>
-        <li><a class="nav-link" href="index.html#contact">Produk Hukum</a></li>
-        <li><a class="nav-link" href="index.html#contact">APBDesa</a></li>
-        <li><a class="nav-link" href="index.html#contact">Pengaduan Masyarakat</a></li>
+        <li><a class="nav-link" href="#">Produk Hukum</a></li>
+        <li><a class="nav-link" href="#">APBDesa</a></li>
+        <li><a class="nav-link" href="#">Pengaduan Masyarakat</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle d-none"></i>
     </nav><!-- .navbar -->

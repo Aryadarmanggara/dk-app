@@ -11,7 +11,7 @@
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">Identitas Desa</h4>
-        <a href=" {{route('identitas.create')}} " class="btn btn-md btn-outline-primary">Tambah Data Identitas Desa</a>
+        <!-- <a href=" {{route('identitas.create')}} " class="btn btn-md btn-outline-primary">Tambah Data Identitas Desa</a> -->
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -50,7 +50,7 @@
                 <th scope="col">Logo</th>
                 <td><img src="{{ Storage::url($identitas->image) }}" alt="" width="100px"></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th scope="col">Instagram</th>
                 <td>{{$identitas->instagram}}</td>
               </tr>
@@ -61,19 +61,19 @@
               <tr>
                 <th scope="col">Twitter</th>
                 <td>{{$identitas->twitter}}</td>
-              </tr>
+              </tr> -->
           </table>
         </div>
       </div>
     </div>
   </div>
 
-  <a href="{{route('identitas.edit', $identitas->id)}}" class="btn btn-sm btn-warning text-white col-md-4">Edit</a>
-  <form method="POST" action="{{ route('identitas.destroy', $identitas->id) }}" style="display: inline-block;" class="col-md-8">
+  <a href="{{route('identitas.edit', $identitas->id)}}" class="btn btn-sm btn-warning text-white col-md-12">Edit</a>
+  <!-- <form method="POST" action="{{ route('identitas.destroy', $identitas->id) }}" style="display: inline-block;" class="col-md-8">
     @csrf
     @method('DELETE')
     <button class="btn btn-sm btn-danger col-md-6" onclick="return confirm('Delete?')">Delete</button>
-  </form>
+  </form> -->
 
   </tbody>
   </table>

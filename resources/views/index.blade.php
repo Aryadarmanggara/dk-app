@@ -5,10 +5,10 @@
 
 <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
   <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
-    <h2>Selamat datang di <span>Desa Keramas</span></h2>
-    <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
+    <h2>Selamat datang di website <span>Desa Keramas</span></h2>
+    <!-- <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p> -->
     <div class="d-flex">
-      <a href="https://www.youtube.com/watch?v=4KVIFNJ7mDQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+      <a href="https://youtu.be/ySMC-rgANTg" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
     </div>
   </div>
 </section>
@@ -70,7 +70,7 @@
 
         <div class="col-lg-5">
           <div class="about-img">
-            <img src="{{asset('frontend')}}/assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{asset('frontend')}}/assets/img/GGP_7503a.jpg" class="img-fluid" alt="">
           </div>
         </div>
 
@@ -126,7 +126,7 @@
 
   <!-- ======= Features Section ======= -->
 
-  <section id="features" class="features">
+  <!-- <section id="features" class="features">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
@@ -141,36 +141,31 @@
             <i class="bi bi-binoculars color-cyan"></i>
             <h4>Pariwisata</h4>
           </a>
-        </li><!-- End Tab 1 Nav -->
-
+        </li>
         <li class="nav-item col-6 col-md-4 col-lg-2">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
             <i class="bi bi-box-seam color-indigo"></i>
             <h4>Alam</h4>
           </a>
-        </li><!-- End Tab 2 Nav -->
-
+        </li>
         <li class="nav-item col-6 col-md-4 col-lg-2">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
             <i class="bi bi-brightness-high color-teal"></i>
             <h4>Seni Budaya</h4>
           </a>
-        </li><!-- End Tab 3 Nav -->
-
+        </li>
         <li class="nav-item col-6 col-md-4 col-lg-2">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
             <i class="bi bi-egg-fried color-red"></i>
             <h4>Kuliner</h4>
           </a>
-        </li><!-- End Tab 4 Nav -->
-
+        </li>
         <li class="nav-item col-6 col-md-4 col-lg-2">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
             <i class="bi bi-easel color-blue"></i>
             <h4>Perkebunan</h4>
           </a>
-        </li><!-- End Tab 5 Nav -->
-
+        </li>
         <li class="nav-item col-6 col-md-4 col-lg-2">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
             <i class="bi bi-map color-green"></i>
@@ -188,8 +183,7 @@
             <i class="bi bi-map color-yellow"></i>
             <h4>Usaha Mikro</h4>
           </a>
-        </li><!-- End Tab 6 Nav -->
-
+        </li>
       </ul>
 
       <div class="tab-content">
@@ -217,7 +211,7 @@
               <img src="{{asset('frontend')}}/assets/img/features-1.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 1 -->
+        </div>
 
         <div class="tab-pane" id="tab-2">
           <div class="row gy-4">
@@ -243,7 +237,7 @@
               <img src="{{asset('frontend')}}/assets/img/features-2.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 2 -->
+        </div>
 
         <div class="tab-pane" id="tab-3">
           <div class="row gy-4">
@@ -268,7 +262,7 @@
               <img src="{{asset('frontend')}}/assets/img/features-3.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 3 -->
+        </div>
 
         <div class="tab-pane" id="tab-4">
           <div class="row gy-4">
@@ -293,7 +287,7 @@
               <img src="{{asset('frontend')}}/assets/img/features-4.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 4 -->
+        </div>
 
         <div class="tab-pane" id="tab-5">
           <div class="row gy-4">
@@ -318,7 +312,7 @@
               <img src="{{asset('frontend')}}/assets/img/features-5.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 5 -->
+        </div>
 
         <div class="tab-pane" id="tab-6">
           <div class="row gy-4">
@@ -343,16 +337,12 @@
               <img src="{{asset('frontend')}}/assets/img/features-6.svg" alt="" class="img-fluid">
             </div>
           </div>
-        </div><!-- End Tab Content 6 -->
+        </div>
 
       </div>
 
     </div>
-  </section><!-- End Features Section -->
-
-
-
-
+  </section> -->
 
 
 
@@ -411,7 +401,7 @@
         @foreach($berita as $data)
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="post-box">
-            <div class="post-img"><img src="{{ Storage::url($data->sampul) }}" class="img-fluid" alt=""></div>
+            <div class="post-img"><img src="{{ Storage::url($data->sampul) }}" class="img-fluid" alt="" height="200px"></div>
             <div class="meta">
               <span class="post-date">{{$data->created_at->diffForHumans()}}</span>
             </div>
@@ -419,7 +409,7 @@
             <p>{{ substr(strip_tags($data->konten), 0, 300) }}
               {{ strlen(strip_tags($data->konten)) > 30 ? "..." : "" }}
             </p>
-            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="{{route('detail_blog', $data->slug)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
         @endforeach
@@ -454,7 +444,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h4>Alamat:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Jl. Maruti No.1, Keramas, Kec. Blahbatuh, Kabupaten Gianyar, Bali 80581</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -470,7 +460,7 @@
               <i class="bi bi-phone flex-shrink-0"></i>
               <div>
                 <h4>Telepon:</h4>
-                <p>+1 5589 55488 55</p>
+                <p>+62 895 3859 03635</p>
               </div>
             </div><!-- End Info Item -->
 

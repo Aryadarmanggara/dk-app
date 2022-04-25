@@ -45,7 +45,7 @@
 
           <div class="form-group">
             <label for="konten">Konten</label>
-            <textarea id="konten" name="konten" class=" form-control" rows="10" id="konten">{{ old('konten') ? old('konten') : $berita->konten }}</textarea>
+            <textarea id="konten" name="konten" class="  summernote form-control" rows="10" id="konten">{{ old('konten') ? old('konten') : $berita->konten }}</textarea>
             @error('konten')
             <div class="alert alert-secondary text-danger mt-1">{{ $message }}</div>
             @enderror

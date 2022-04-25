@@ -33,8 +33,8 @@
                 <td>{{$data->judul}}</td>
                 <td><img src="{{ Storage::url($data->foto) }}" class="mb-3" alt="" width="100px"></td>
                 <td>
-                  <a href="{{route('berita.edit', $data->id)}}" class="btn btn-sm btn-warning text-white">Edit</a>
-                  <form method="POST" action="{{ route('berita.destroy', $data->id) }}" style="display: inline-block;">
+                  <a href="{{route('galeri.edit', $data->id)}}" class="btn btn-sm btn-warning text-white">Edit</a>
+                  <form method="POST" action="{{ route('galeri.destroy', $data->id) }}" style="display: inline-block;">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-sm btn-danger" onclick="return confirm('Delete?')">Delete</button>

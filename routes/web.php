@@ -1,18 +1,38 @@
 <?php
 
-
+use App\Http\Controllers\AlaamController;
 use App\Http\Controllers\AparaturController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PkkController;
 use App\Http\Controllers\BUMDesController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\IdentitasController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\KarangTarunaController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\KerajinanController;
+use App\Http\Controllers\KulinerController;
+use App\Http\Controllers\LinmasController;
+use App\Http\Controllers\PariwisataController;
 use App\Http\Controllers\PendudukController;
+use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PerikananController;
+use App\Http\Controllers\PerkebunanController;
+use App\Http\Controllers\PublikBeritaController;
+use App\Http\Controllers\PublikBumdesaController;
+use App\Http\Controllers\PublikIdentitasController;
+use App\Http\Controllers\PublikKarangTarunaController;
+use App\Http\Controllers\PublikLinmasController;
+use App\Http\Controllers\PublikPerangkatController;
+use App\Http\Controllers\PublikPkkController;
+use App\Http\Controllers\PublikSejarahController;
+use App\Http\Controllers\PublikVisiMisiController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\SeniBudayaController;
 use App\Http\Controllers\UlasanController;
+use App\Http\Controllers\UsahaMikroController;
 use App\Http\Controllers\VisiMisiController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +52,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [IndexController::class, 'index'])->name('index.home');
+// Route::get('berita/{slug}', [IndexController::class, 'show'])->name('show');
+Route::get('/detail_blog/{slug}', [DetailBlogController::class, 'index'])->name('detail_blog');
+Route::get('/sejarah_desa', [PublikSejarahController::class, 'index'])->name('sejarah_desa');
+Route::get('/identitas_desa', [PublikIdentitasController::class, 'index'])->name('identitas_desa');
+Route::get('/pvisimisi', [PublikVisiMisiController::class, 'index'])->name('pvisimisi');
+Route::get('/publik_pkk', [PublikPkkController::class, 'index'])->name('publik_pkk');
+Route::get('/publik_bumdesa', [PublikBumdesaController::class, 'index'])->name('publik_bumdesa');
+Route::get('/publik_linmas', [PublikLinmasController::class, 'index'])->name('publik_linmas');
+Route::get('/publik_karang_taruna', [PublikKarangTarunaController::class, 'index'])->name('publik_karang_taruna');
+
+Route::resource('perangkat-desa', PublikPerangkatController::class);
+Route::get('/publik_berita', [PublikBeritaController::class, 'index'])->name('publik_berita');
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('dashboard', DashboardController::class);
@@ -47,14 +79,27 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('aparatur_desa', AparaturController::class);
     Route::resource('pkk', PkkController::class);
     Route::resource('bumdes', BUMDesController::class);
+    Route::resource('karang_taruna', KarangTarunaController::class);
+    Route::resource('linmas', LinmasController::class);
 
     //route post
+    Route::resource('pengumuman', PengumumanController::class);
     Route::resource('berita', BeritaController::class);
     Route::resource('kategori', KategoriController::class);
 
     // route main feature
     Route::resource('penduduk', PendudukController::class);
     Route::resource('galeri', GaleriController::class);
+
+    // route potensi desa
+    Route::resource('pariwisata', PariwisataController::class);
+    Route::resource('alam', AlaamController::class);
+    Route::resource('senibudaya', SeniBudayaController::class);
+    Route::resource('perkebunan', PerkebunanController::class);
+    Route::resource('kuliner', KulinerController::class);
+    Route::resource('perikanan', PerikananController::class);
+    Route::resource('kerajinan', KerajinanController::class);
+    Route::resource('usahamikro', UsahaMikroController::class);
 });
 
 

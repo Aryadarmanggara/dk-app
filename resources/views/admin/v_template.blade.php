@@ -7,16 +7,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Desa Keramas | @yield('title')</title>
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend')}}/images/favicon.png">
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend')}}/images/favicon.png"> -->
   <link rel="stylesheet" href="{{asset('backend')}}/vendor/owl-carousel/css/owl.carousel.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/vendor/owl-carousel/css/owl.theme.default.min.css">
   <link href="{{asset('backend')}}/vendor/summernote/summernote.css" rel="stylesheet">
   <link href="{{asset('backend')}}/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link href="{{asset('backend')}}/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js">
-  </script>>
 
+  </script>>
+  <!-- favicon -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon')}}/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{asset('favicon')}}/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{asset('favicon')}}/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('favicon')}}/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{asset('favicon')}}/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{asset('favicon')}}/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{asset('favicon')}}/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{asset('favicon')}}/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('favicon')}}/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{asset('favicon')}}/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon')}}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{asset('favicon')}}/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon')}}/favicon-16x16.png">
+  <link rel="manifest" href="{{asset('favicon')}}/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
     .montserrat {
       font-family: montserrat;
       color: black;
@@ -50,18 +70,17 @@
     <!--**********************************
             Nav header start
         ***********************************-->
-    <div class="nav-header">
+    <div class="nav-header bg-white">
       <a href="index.html" class="brand-logo">
-        <img class="logo-abbr" src="{{asset('backend')}}/images/logo.png" alt="">
-        <img class="logo-compact" src="{{asset('backend')}}/images/logo-text.png" alt="">
-        <img class="brand-title" src="{{asset('backend')}}/images/logo-text.png" alt="">
+        <img class="logo-abbr" src="{{asset('backend')}}/images/logoo.png" alt="">
+        <h3 class="montserrat ml-2 mt-2">Desa Keramas</h3>
       </a>
 
-      <div class="nav-control">
+      <!-- <div class="nav-control">
         <div class="hamburger">
           <span class="line"></span><span class="line"></span><span class="line"></span>
         </div>
-      </div>
+      </div> -->
     </div>
     <!--**********************************
             Nav header end
@@ -75,7 +94,7 @@
         <nav class="navbar navbar-expand">
           <div class="collapse navbar-collapse justify-content-between">
             <div class="header-left">
-              <div class="search_bar dropdown">
+              <!-- <div class="search_bar dropdown">
                 <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
                   <i class="mdi mdi-magnify"></i>
                 </span>
@@ -84,11 +103,11 @@
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                   </form>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <ul class="navbar-nav header-right">
-              <li class="nav-item dropdown notification_dropdown">
+              <!-- <li class="nav-item dropdown notification_dropdown">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                   <i class="mdi mdi-bell"></i>
                   <div class="pulse-css"></div>
@@ -146,7 +165,7 @@
                   </ul>
                   <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
                 </div>
-              </li>
+              </li> -->
               <li class="nav-item dropdown header-profile">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                   <i class="mdi mdi-account"></i>
@@ -257,7 +276,7 @@
 
   <script src="{{asset('backend')}}/js/dashboard/dashboard-1.js"></script>
 
-  <script src="https://kit.fontawesome.com/4f75af8bce.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/199893f26a.js" crossorigin="anonymous"></script>
   <!-- Summernote -->
   <script src="{{asset('backend')}}/vendor/summernote/js/summernote.min.js"></script>
   <!-- Summernote init -->

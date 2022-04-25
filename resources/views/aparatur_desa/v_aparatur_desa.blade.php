@@ -14,6 +14,7 @@
         <a href=" {{route('aparatur_desa.create')}} " class="btn btn-md btn-outline-primary">Tambah Data Aparatur Desa</a>
       </div>
       <div class="card-body">
+        @if($aparaturs[0])
         <div class="table-responsive">
           <table class="table">
             <thead class="thead-primary">
@@ -98,6 +99,9 @@
             </tbody>
           </table>
         </div>
+        @else
+        <p class="alert alert-danger">Anda belum memiliki data apapun !</p>
+        @endif
       </div>
     </div>
   </div>

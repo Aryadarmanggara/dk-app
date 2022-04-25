@@ -13,11 +13,16 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $pkk = Pkk::first();
         $ulasan = Ulasan::first();
         $visimisi = VisiMisi::first();
-        $berita = Berita::latest()->paginate(5);
+        $berita = Berita::latest()->paginate(3);
         $galeri = Galeri::latest()->paginate(5);
-        return view('index', compact('pkk', 'berita', 'galeri', 'ulasan', 'visimisi'));
+        return view('index', compact('berita', 'galeri', 'ulasan', 'visimisi'));
+    }
+
+    public function show($slug)
+    {
+        $post = Berita::where('slug', $slug)->first();
+        return view('show', compact('post'));
     }
 }

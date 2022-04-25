@@ -46,7 +46,7 @@ class BeritaController extends Controller
             'judul' => 'required',
             'sampul' => 'required|image|mimes:jpg,jpeg,png',
             'konten' => 'required',
-            // 'id_kategori' => 'required'
+            // 'id_kategori' => 'required' 
 
         ]);
 
